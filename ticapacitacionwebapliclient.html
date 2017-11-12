@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consumo de WEB API</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+                $.ajax({
+                    type: 'HTTPGET',
+                    contentType: 'application-json; charset=utf-8',
+                    url: 'https://ticapacitacion.com/webapi/northwind/httpgetverb/all',
+                    success: function(data){
+                        $.each(data, function(index, value){
+                            var fila = $('<tr></tr>');
+                            var celda = $('<td></td>').text(value.ProductID);
+                            var celda2 = $('<td></td>').text(value.ProductName);
+                            fila.append(celda).append(celda2);
+                            $('#datos').append(
+                                fila
+                            );
+                        });
+                    }
+                });
+        });
+    </script>
+</head>
+<body>
+    <html>
+        <div>
+            <table id="datos" style="margin: 0 auto;">
+                <caption>Consumir WEB API https://ticapacitacion.com/webapi/northwind/httpgetverb/all</caption>   
+            </table>
+        </div>
+    </html>
+</body>
+</html>
