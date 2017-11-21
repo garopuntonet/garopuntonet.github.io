@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Integraci&oacute;n de componentes</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="../../css/componente menu/menu.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/componente ui búsqueda/buscar.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/integración componentes/integracion.css" />
+    <link href="../../css/componente carrusel/carrusel.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../../css/componente noticias/noticias.css" />
+    <link href="../../css/componente multimedia/multimedia.css" rel="stylesheet">
+    <link href="../../css/componente autores/autores.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../../javascript/layout_view/layout_view.js"></script>
+    <script src="../../javascript/componente ui búsqueda/busqueda.js"></script>
+    <script src="../../javascript/componente menu/menu.js"></script>
+    <script src="../../javascript/componente carrusel/carrusel.js"></script>
+    <script src="../../javascript/componente noticias/noticias.js"></script>
+    <script src="../../javascript/componente multimedia/multimedia.js"></script>
+    <script src="../../javascript/componente autores/autores.js"></script>
+</head>
+
+<body>
+    <div id="fondoFijo"></div>
+    <div class="fondoFijoColor"></div>
+    <div id="fondoMenu" class="styleVerifica">
+        <div id="contenedorMenu">
+            <img alt="logotipo" src="../../imagenes/busqueda.png" />
+            <div id="ctdrCampoBusqueda">
+                <img src="../../imagenes/busqueda.png" alt="">
+                <input type="text" placeholder="Buscar...">
+            </div>
+            <img src="../../imagenes/icono_menu_2.png" alt="icono menu" class="iconoMenu" />
+            <div id="agrupadorOpciones">
+                <div>
+                    <nav>
+                        <span><a>Acerca de</a></span>
+                    </nav>
+                    <nav>
+                        <span><a href="http://www.google.com.mx">Art&iacute;culos</a></span>
+                    </nav>
+                    <nav>
+                        <span>Frameworks <img src="../../imagenes/flecha.png" /></span>
+                        <ul>
+                            <li><span><a>Windows Forms</a></span></li>
+                            <li><span><a>ASP .NET WEB FORMS</a></span></li>
+                            <li>
+                                <span>ASP .NET MVC</span>
+                                <ul>
+                                    <li><span><a>ADO .NET</a></span></li>
+                                    <li><span>LINQ</span></li>
+                                    <li><span>System Threading</span></li>
+                                    <li><span>TPL</span></li>
+                                    <li><span>.NET Remoting</span></li>
+                                </ul>
+                            </li>
+                            <li><span>Entity Framework</span></li>
+                            <li><span>Windows Comunication Foundation</span></li>
+                            <li><span>ASP .NET WEB API</span></li>
+                        </ul>
+                    </nav>
+                    <nav>
+                        <span>APIs <img src="../../imagenes/flecha.png" /></span>
+                        <ul>
+                            <li><span>ADO .NET</span></li>
+                            <li><span>LINQ</span></li>
+                            <li><span>System Threading</span></li>
+                            <li><span>TPL</span></li>
+                            <li><span>.NET Remoting</span></li>
+                        </ul>
+                    </nav>
+                    <nav>
+                        <span>Demostraciones</span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <img src="../../imagenes/cerrar.png" class="oculto" />
+    </div>
+    <div id="seccion1Principal">
+        <div class="Contenido">
+            <div id="contenedorCarrusel">
+                <div id="ventanaCarrusel">
+                    <!-- Definir ancho fijo -->
+                    <div id="cont_1" class="contenidoCarrusel">
+                        <div>
+                            <h1>
+                                Entity Framework Code First Approach + MySQL Database (1)
+                            </h1>
+                            <a href="">Leer</a>
+                        </div>
+                        <div>
+                            <h1>
+                                Entity Framework Database First Approach + SQL Server LocalDB (2)
+                            </h1>
+                            <a href="">Leer</a>
+                        </div>
+                        <div>
+                            <h1>
+                                Entity Framework Model First Approach + MySQL Database (3)
+                            </h1>
+                            <a href="">Leer</a>
+                        </div>
+                        <div>
+                            <h1>
+                                Entity Framework Code First From Database Approach + SQL Server LocalDB (4)
+                            </h1>
+                            <a href="">Leer</a>
+                        </div>
+                    </div>
+                    <div id="cont_2" class="contenidoCarrusel">
+                        <div>
+                            <h1>
+                                Entity Framework Code First Approach + MySQL Database (1)
+                            </h1>
+                            <a href="">Leer</a>
+                        </div>
+                        <div>
+                            <h1>
+                                Entity Framework Database First Approach + SQL Server LocalDB (2)
+                            </h1>
+                            <a href="">Leer</a>
+                        </div>
+                        <div>
+                            <h1>
+                                Entity Framework Model First Approach + MySQL Database (3)
+                            </h1>
+                            <a href="">Leer</a>
+                        </div>
+                        <div>
+                            <h1>
+                                Entity Framework Code First From Database Approach + SQL Server LocalDB (4)
+                            </h1>
+                            <a href="">Leer</a>
+                        </div>
+                    </div>
+                    <div id="contenidoFlechas" class="herramientas">
+                        <img src="../../imagenes/flecha2D.png" alt="1">
+                        <img src="../../imagenes/flecha2I.png" alt="-1">
+                    </div>
+                    <div id="contenidoBtns" class="herramientas">
+                        <img src="../../imagenes/boton_c3.png" alt="1">
+                        <img src="../../imagenes/boton_c3.png" alt="2">
+                        <img src="../../imagenes/boton_c3.png" alt="3">
+                        <img src="../../imagenes/boton_c3.png" alt="4">
+                    </div>
+                </div>
+                <input type="hidden" value="4" id="avisosCuenta" name="avisosCuenta" />
+            </div>
+        </div>
+    </div>
+    <div id="seccion2Principal" class="styleVerifica">
+        <div class="fondoFijoColor"></div>
+        <div class="Contenido">
+            <div class="noticiasR">
+                <p class="tituloNR">Publicaciones recientes</p>
+                <div class="bloqueNR">
+                    <p class="tituloBNR">
+                        EF + MySQL
+                    </p>
+                    <p class="imagenBNR">
+                        <img src="../../imagenes/mysql.png" alt="imagen mysql">
+                    </p>
+                    <p>
+                        <a href="">¡Comienza a utilizar Entity Framework CF con MySQL!</a>
+                    </p>
+                </div>
+                <div class="bloqueNR">
+                    <p class="tituloBNR">
+                        EF + MySQL
+                    </p>
+                    <p class="imagenBNR">
+                        <img src="../../imagenes/mysql.png" alt="imagen mysql">
+                    </p>
+                    <p>
+                        <a href="">¡Comienza a utilizar Entity Framework CF con MySQL!</a>
+                    </p>
+                </div>
+                <div class="bloqueNR">
+                    <p class="tituloBNR">
+                        EF + MySQL
+                    </p>
+                    <p class="imagenBNR">
+                        <img src="../../imagenes/mysql.png" alt="imagen mysql">
+                    </p>
+                    <p>
+                        <a href="">¡Comienza a utilizar Entity Framework CF con MySQL!</a>
+                    </p>
+                </div>
+                <div class="bloqueNR">
+                    <p class="tituloBNR">
+                        EF + MySQL
+                    </p>
+                    <p class="imagenBNR">
+                        <img src="../../imagenes/mysql.png" alt="imagen mysql">
+                    </p>
+                    <p>
+                        <a href="">¡Comienza a utilizar Entity Framework CF con MySQL!</a>
+                    </p>
+                </div>
+            </div>
+            <div class="noticiasR">
+                <p class="tituloNR">Publicaciones mas comentadas</p>
+                <div class="bloqueNR">
+                    <p class="tituloBNR">
+                        EF + MySQL
+                    </p>
+                    <p class="imagenBNR">
+                        <img src="../../imagenes/mysql.png" alt="imagen mysql">
+                    </p>
+                    <p>
+                        <a href="">¡Comienza a utilizar Entity Framework CF con MySQL!</a>
+                    </p>
+                </div>
+                <div class="bloqueNR">
+                    <p class="tituloBNR">
+                        EF + MySQL
+                    </p>
+                    <p class="imagenBNR">
+                        <img src="../../imagenes/mysql.png" alt="imagen mysql">
+                    </p>
+                    <p>
+                        <a href="">¡Comienza a utilizar Entity Framework CF con MySQL!</a>
+                    </p>
+                </div>
+                <div class="bloqueNR">
+                    <p class="tituloBNR">
+                        EF + MySQL
+                    </p>
+                    <p class="imagenBNR">
+                        <img src="../../imagenes/mysql.png" alt="imagen mysql">
+                    </p>
+                    <p>
+                        <a href="">¡Comienza a utilizar Entity Framework CF con MySQL!</a>
+                    </p>
+                </div>
+                <div class="bloqueNR">
+                    <p class="tituloBNR">
+                        EF + MySQL
+                    </p>
+                    <p class="imagenBNR">
+                        <img src="../../imagenes/mysql.png" alt="imagen mysql">
+                    </p>
+                    <p>
+                        <a href="">¡Comienza a utilizar Entity Framework CF con MySQL!</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="seccion3Principal">
+        <div id="franjaOpciones">
+            <div class="ctdrFranjaOpcion">
+                <div id="franjaSelector">
+                    <span>¿Por qu&eacute; .NET?</span>
+                    <img src="../../imagenes/flecha3A.png" />
+                </div>
+                <div class="franjaOpcion" id="op_0">
+                    <div class="flechaFranjaOp"></div>
+                    <span>¿Por qu&eacute; .NET?</span>
+                </div>
+                <div class="franjaOpcion" id="op_1">
+                    <div class="flechaFranjaOp"></div>
+                    <span>Mi primer Framework .NET</span>
+                </div>
+                <div class="franjaOpcion" id="op_2">
+                    <div class="flechaFranjaOp"></div>
+                    <span>¿Qu&eacute; hacen los programadores?</span>
+                </div>
+            </div>
+        </div>
+        <div id="ctdrMultimedia">
+            <div class="ctdMultimedia">
+                <div class="msjMultimedia">
+                    <p>
+                        <span>
+                    Conoce las ventajas y desventajas del .NET Framework y porqu&eacute; lo deber&iacute;s 
+                    de considerar como tu plataforma de desarrollo preferida.
+                    </span>
+                    </p>
+                    <p>
+                        <a href="">
+                    Mas informaci&oacute;n
+                    </a>
+                    </p>
+                </div>
+            </div>
+            <div class="ctdMultimedia">
+                <div class="msjMultimedia">
+                    <p>
+                        <span>
+                    Conoce las ventajas y desventajas del .NET Framework y porqu&eacute; lo deber&iacute;s 
+                    de considerar como tu plataforma de desarrollo preferida.
+                    </span>
+                    </p>
+                    <p>
+                        <a href="">
+                    Mas informaci&oacute;n
+                    </a>
+                    </p>
+                </div>
+            </div>
+            <div class="ctdMultimedia">
+                <div class="msjMultimedia">
+                    <p>
+                        <span>
+                    ¿Programador o desarrollador?, ¿Analista o tira-código?, ¿Hay sufuciente trabajo?
+                a titulo personal comparto mis opiniones acerca de.
+                    </span>
+                    </p>
+                    <p>
+                        <a href="">
+                    Mas informaci&oacute;n
+                    </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="seccion4Principal" class="styleVerifica">
+        <div id="ctdrVentanaAutores">
+            <div class="btnsAutores">
+                <p class="tituloAutores">Autores</p>
+                <div class="btns" id="izqAutor"><img src="../../imagenes/flechasAutores.png" alt=""></div>
+                <div class="btns" id="derAutor"><img src="../../imagenes/flechasAutores.png" alt=""></div>
+            </div>
+            <div id="ventanaAutores">
+                <input id="numAutores" type="hidden" value="4" />
+                <div class="ctdrAutor">
+                    <div class="fotoAutor">
+                        <img src="../../imagenes/garo.jpg" alt="">
+                    </div>
+                    <p class="nombreAutor">Esteban GaRo</p>
+                    <div class="division"></div>
+                    <p class="puestoAutor">CEO</p>
+                </div>
+                <div class="ctdrAutor">
+                    <div class="fotoAutor">
+                        <img src="../../imagenes/garo.jpg" alt="">
+                    </div>
+                    <p class="nombreAutor">Esteban GaRo 2</p>
+                    <div class="division"></div>
+                    <p class="puestoAutor">CEO</p>
+                </div>
+                <div class="ctdrAutor">
+                    <div class="fotoAutor">
+                        <img src="../../imagenes/garo.jpg" alt="">
+                    </div>
+                    <p class="nombreAutor">Esteban GaRo 2</p>
+                    <div class="division"></div>
+                    <p class="puestoAutor">CEO</p>
+                </div>
+                <div class="ctdrAutor">
+                    <div class="fotoAutor">
+                        <img src="../../imagenes/garo.jpg" alt="">
+                    </div>
+                    <p class="nombreAutor">Esteban GaRo 2</p>
+                    <div class="division"></div>
+                    <p class="puestoAutor">CEO</p>
+                </div>
+            </div>
+        </div>
+        <div id="pieDePagina">
+            <p><span>estebangaro.net</span> |
+                <span>Objetivos</span> |
+                <span>Powered by Microsoft ASP .NET MVC</span></p>
+            <p><img src="../../imagenes/twitter-icon.png" alt="">
+                <img src="../../imagenes/facebook-icon.png" alt="">
+                <img src="../../imagenes/linkedin-icon.png" alt=""></p>
+        </div>
+    </div>
+</body>
+
+</html>
