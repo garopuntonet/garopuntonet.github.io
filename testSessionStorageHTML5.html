@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test SessionStorage</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        var contadorClientes = 0;
+        $(function(){
+            $('button').eq(0).click(function(){
+                if (typeof(Storage) !== "undefined") {
+                    sessionStorage.setItem('cliente_' + (contadorClientes++), $('#texto1').val());
+                    alert('¡Cliente almacenado!');
+                } else{
+                    alert('¡No se cuenta con soporte para WEB STORAGE HTML!');
+                }
+            });
+            $('button').eq(1).click(function(){
+                if (typeof(Storage) !== "undefined") {
+                    var cliente = sessionStorage.getItem('cliente_' + $('#texto2').val())
+                    alert('Cliente ' + $('#texto2').val() + ': ' + cliente);
+                } else{
+                    alert('¡No se cuenta con soporte para WEB STORAGE HTML!');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <p><input type="text" name="" id="texto1" placeholder="Introducir nombre cliente" ></p>
+    <button>Registra Cliente</button>
+    <p><input type="text" name="" id="texto2" placeholder="introducir número cliente"></p>
+    <button>Consulta Cliente</button>
+</body>
+</html>
