@@ -10,8 +10,8 @@
                 $('.btnPublicar').click(function(){
                     // Solicitar información de autor del comentario:
                     // Nombre, email, verificación de no robot (re captcha).
-                    btnPublicarManejadorClic($(this));
-                    //testObtenMarcado();
+                    // btnPublicarManejadorClic($(this));
+                    testObtenMarcado();
                 });
                 $('.lblResponder').click(function(){
                     lblResponderManejadorClic($(this));

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>popup Garo validaciones</title>
+    <link rel="stylesheet" href="..\..\css\componente popup validaciones\popupGv.css" />
+    <style>
+        .bloque{
+            width: 100%;
+            margin: 1em 0;
+            border: solid greenyellow 2px;
+            padding: 1em;
+        }
+        .bloque > *{
+            border: solid red 1px;
+        }
+        .bloque:nth-child(odd){
+            width: 500px;
+        }
+        .bloque:nth-child(even){
+            width: 300px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="..\..\css\componente popup validaciones\popupGv.js"></script>
+</head>
+<body>
+    <div class="bloque"><p>Elemento de agrupación bloque (p)</p></div>
+    <div class="bloque"><div>Elemento de agrupación bloque (div)</div></div>
+    <div class="bloque"><span>Elemento de agrupación en linea (span)</span></div>
+    <div class="bloque"><input type="text" / placeholder="elemento de agr... en linea"></div>
+    <div class="bloque">
+        <textarea name="areaTxt" id="textareademo" cols="30" rows="10">
+                Elemento TextArea
+        </textarea>
+    </div>
+    <button>Asigna popup validaciones bloque medio</button>
+    <div class="popupGv_validacion" id="popupGv_validacion_model">
+        <div class="Titulo"><span></span></div>
+        <div class="Contenido"><span></span></div>
+        <img class="Cerrar" src="..\..\imagenes\salir.png" alt="Salir">
+        <div class="Flecha"></div>
+    </div>
+</body>
+</html>
