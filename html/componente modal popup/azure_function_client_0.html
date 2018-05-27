@@ -15,7 +15,7 @@
                         '&nombre=' + $('#nameGET').val() + '&apellido=' + $('#apellidoGET').val(),
                     dataType: 'json',
                     success: function(data) {
-                        alert('Respuesta recibida (GET): ' + data);
+                        alert('Respuesta recibida (GET): ' + data.Message);
                     },
                     error: function() {
                         alert('Ha fallado la solicitud (GET) hacía la azure function');
