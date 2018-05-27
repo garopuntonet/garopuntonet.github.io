@@ -25,7 +25,7 @@
 
             $('#btnPOST').click(function() {
                 $.ajax({
-                    method: 'GET',
+                    method: 'POST',
                     url: 'https://function-app-test-garo.azurewebsites.net/api/HttpTriggerCSharp1?code=yjKcDjiz9HfcT54aHO36vqUNF8LnRqhzzbUzq8lAkIS3Fd1XCH600A==',
                     dataType: 'json',
                     contentType: 'application/json; charset=utf-8',
@@ -34,7 +34,7 @@
                         'apellido': $('#apellidoPOST').val()
                     }),
                     success: function(data) {
-                        alert('Respuesta recibida (POST): ' + data);
+                        alert('Respuesta recibida (POST): ' + data.Message);
                     },
                     error: function() {
                         alert('Ha fallado la solicitud (POST) hacía la azure function');
